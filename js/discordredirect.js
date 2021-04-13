@@ -1,3 +1,3 @@
 						window.setTimeout(function() {
-							window.location.href = 'https://discord.gg/TTssvR7W3x';
+							window.location.href = 'https://discord.gg/WYXBrSGDdx';
 						}, 3000);
