@@ -45,7 +45,20 @@
 
 
 
+<script>
+  
+    var socket = io.connect('https://DLink.rougeram.repl.co');
+    $('form').submit(function(e){
+      e.preventDefault();
+      socket.emit('chat_message', $('#txt').val());
+      $('#txt').val('');
+      return false;
+    });
+    socket.on('pong', function(msg){
+      console.log(msg);
 
+    });
+    </script>
 		<!-- Scripts -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrollex.min.js"></script>
