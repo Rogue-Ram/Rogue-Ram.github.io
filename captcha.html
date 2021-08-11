@@ -13,6 +13,13 @@ data-sitekey="6LdY_vIbAAAAAGwdcDYQ1sHoqaivIFC3N2vQcgBL"
     <p>
    <!-- <button type="verify" >Submit</button> -->
       <script>
+        const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+const link = urlParams.get('link')
+
+console.log(page_type);
         var onloadCallback = function() {
     grecaptcha.render('html_element', {
       'sitekey' : '6LdY_vIbAAAAAGwdcDYQ1sHoqaivIFC3N2vQcgBL',
@@ -20,15 +27,15 @@ data-sitekey="6LdY_vIbAAAAAGwdcDYQ1sHoqaivIFC3N2vQcgBL"
     });
   };
         var correctCaptcha = function(response) {
-    alert(response);
+   // alert(response);
           if (response.length == 0) {
-          //$('#recaptcha-error').show();
+          
           return false;
         }
           //recaptcha passed validation
         else {
           window.location.href = "https://rogueram.xyz";
-          //$('#recaptcha-error').hide();
+          
           return true;
         }
 };
