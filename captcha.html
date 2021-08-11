@@ -19,7 +19,7 @@ const urlParams = new URLSearchParams(queryString);
 
 const link = urlParams.get('link')
 
-console.log(link);
+//console.log(link);
         var onloadCallback = function() {
     grecaptcha.render('html_element', {
       'sitekey' : '6LdY_vIbAAAAAGwdcDYQ1sHoqaivIFC3N2vQcgBL',
@@ -34,7 +34,7 @@ console.log(link);
         }
           //recaptcha passed validation
         else {
-          window.location.href = "https://rogueram.xyz";
+          window.location.href = link;
           
           return true;
         }
