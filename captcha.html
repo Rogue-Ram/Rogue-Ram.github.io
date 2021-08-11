@@ -18,7 +18,7 @@ data-sitekey="6LdY_vIbAAAAAGwdcDYQ1sHoqaivIFC3N2vQcgBL"
 const urlParams = new URLSearchParams(queryString);
 
 const link = urlParams.get('link')
-
+window.history.pushState({}, document.title, "/" + "https://rogueram.xyz/captcha");
 //console.log(link);
         var onloadCallback = function() {
     grecaptcha.render('html_element', {
