@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>reCaptcha validation demo</title>
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
   </head>
   <body>
 <div class="form_container">
@@ -9,29 +9,19 @@
     <div class="g-recaptcha" 
 data-sitekey="6LdY_vIbAAAAAGwdcDYQ1sHoqaivIFC3N2vQcgBL" 
 ></div>
+    <div id='html_element'></div>
     <p>
     <button type="verify" >Submit</button>
       <script>
-        var i = 1;                  //  set your counter to 1
-
-function myLoop() {         //  create a loop function
-  setTimeout(function() {   //  call a 3s setTimeout when the loop is called
-    var response = grecaptcha.getResponse();
-
-if(response.length == 0)
-    //reCaptcha not verified
-
-else
-  alert("Noice");
-    //reCaptch verified  //  your code here
-    i++;                    //  increment the counter
-    if (i < 10) {           //  if the counter < 10, call the loop function
-      myLoop();             //  ..  again which will trigger another 
-    }                       //  ..  setTimeout()
-  }, 1000)
-}
-
-myLoop(); 
+        var onloadCallback = function() {
+    grecaptcha.render('html_element', {
+      'sitekey' : 'your_site_key',
+      'callback' : correctCaptcha
+    });
+  };
+        var correctCaptcha = function(response) {
+    alert(response);
+};
       </script>
     </p>
   </form>
