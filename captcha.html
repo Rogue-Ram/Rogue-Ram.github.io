@@ -35,7 +35,7 @@ window.history.pushState({}, document.title, "/" + "https://rogueram.xyz/captcha
           //recaptcha passed validation
         else {
           window.location.href = link;
-          
+          setTimeout(function(){ window.location.href = "https://rogueram.xyz"; }, 3000);
           return true;
         }
 };
