@@ -18,6 +18,7 @@ data-sitekey="6LdY_vIbAAAAAGwdcDYQ1sHoqaivIFC3N2vQcgBL"
 const urlParams = new URLSearchParams(queryString);
 
 const link = urlParams.get('link')
+const redirect = urlParams.get('redirect')
 window.history.pushState({}, document.title, "/" + "https://rogueram.xyz/captcha");
 //console.log(link);
         var onloadCallback = function() {
@@ -35,7 +36,7 @@ window.history.pushState({}, document.title, "/" + "https://rogueram.xyz/captcha
           //recaptcha passed validation
         else {
           window.location.href = link;
-          setTimeout(function(){ window.location.href = "https://rogueram.xyz"; }, 3000);
+          window.location.href = redirect;
           return true;
         }
 };
