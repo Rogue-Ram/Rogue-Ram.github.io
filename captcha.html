@@ -11,6 +11,22 @@ data-sitekey="6LdY_vIbAAAAAGwdcDYQ1sHoqaivIFC3N2vQcgBL"
 ></div>
     <p>
     <button type="submit" >Submit</button>
+      <script>
+        document.getElementById("my_captcha_form").addEventListener("submit",function(evt)
+  {
+  
+  var response = grecaptcha.getResponse();
+  if(response.length == 0) 
+  { 
+    //reCaptcha not verified
+    alert("please verify you are humann!"); 
+    evt.preventDefault();
+    return false;
+  }
+  alert("yay");
+  
+});
+        </script?
     </p>
   </form>
 </div>
