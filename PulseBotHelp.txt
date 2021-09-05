@@ -1,0 +1,13 @@
+🚫 = admin only
+--Below you can find all the commands for the Pulse Development bot--
+-build: Sends a gif of a wall being built to the channel (For no reason)
+-ticketmsg: Sends the ticket message to the current channel 🚫
+-joke: Generates a random joke
+-donate: Gives you a link to pulse's donation page 
+-github: Gives you a link to the github page
+-prefix: Changes the current prefix 🚫
+-changegithub: Changes the github page link for the github command 🚫
+-announce: Sends a announcement to the announcement channel 🚫
+-meme: Gets a random meme from r/memes
+-help: Gives you this
+-clear: Clears the number of messages provided cannot go past 100 🚫
