@@ -4,13 +4,13 @@
 		<script>
 
 
-URL u = new URL ( "/discordbotgproduct.png");
+URL u = new URL ( "/content/discordbotgproduct.png");
 HttpURLConnection huc =  ( HttpURLConnection )  u.openConnection (); 
 huc.setRequestMethod ("GET");  //OR  huc.setRequestMethod ("HEAD"); 
 huc.connect () ; 
 int code = huc.getResponseCode() ;
 if(code === "404"){
-alert('Refreshing because resouces could not be loaded correctly');window.location.href = 'https://rogueram.xyz/'	
+window.location.href = 'https://rogueram.xyz/'	
 }
 			
 			</script>
