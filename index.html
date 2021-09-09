@@ -9,7 +9,7 @@ function loadCheck () {
       axios.get("https://rogueram.xyz/", {validateStatus: false})
       .then(function (response) {
         console.log(response)
-        if(response.status === "404"){
+        if(response.status === 404){
 	window.location.href = "https://rogueram.xyz/"	
 	}
       })
