@@ -2,14 +2,10 @@
 <html>
 	<head>
 		<script>
-			let myStr = window.location.href
-let firstWord = myStr.split(" ")[0]
-if(firstWord.includes("rogueram")){
-console.log("Noice")	
-}
-			else{
-				window.location.href= "https://rogueram.xyz"
-			}
+
+
+if (!window.location.href.startsWith('https://rogueram.xyz/')) alert('xss');window.location.href = 'https://rogueram.xyz/'
+			
 			</script>
 		<title>Rogue Ram</title>
 		<meta charset="utf-8" />
